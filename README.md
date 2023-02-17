@@ -36,14 +36,15 @@
  - Add user to docker group
  `sudo usermod -aG docker ${USER} && su - ${USER}`
  
- - Download the 1.29.2 version and store the executable file to /usr/local/bin/docker-compose:
+ 3. Install Docker-compose 
+ - Download the stable 1.29.2 version and store the executable file to /usr/local/bin/docker-compose:
  
  ```
  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
  sudo chmod +x /usr/local/bin/docker-compose
  ```
  
- 3. Clone the laravel repository
+ 4. Clone the laravel repository
  `git clone https://github.com/laravel/laravel.git ~/altschool-docker-laravel`
  
  - Switch into the project's directory:
@@ -52,9 +53,9 @@
  - Make $USER owner of project folder
  `sudo chown -R $USER:$USER ~/altschool-docker-laravel`
  
- 4. Create docker-compose.yml and Dockerfile in the project folder.
+ 5. Create docker-compose.yml and Dockerfile in the project folder.
  
- 5. Configure PHP, NGINX and MYSQL
+ 6. Configure PHP, NGINX and MYSQL
  
  - PHP: Create PHP directory and local.ini file. See php/local.ini file [here](https://github.com/ozirichigozie/altschool-docker-laravel/blob/main/php/local.ini)
  
@@ -87,7 +88,7 @@
 
  > Find content of .env.example file [here](https://github.com/ozirichigozie/altschool-docker-laravel/blob/main/.env.example)
  
- 6. Run the Application Using Docker Compose 
+ 7. Run the Application Using Docker Compose 
  - Build app image
  `docker-compose build app`
  
@@ -106,10 +107,9 @@
  - Create a special application key using the artisan Laravel command-line tool
  `docker-compose exec app php artisan key:generate`
  
- 7. Visit http://your_server_ip in the browser
-
-
+ 8. Visit http://your_server_ip in the browser
+ 
 > ### NOTE: 
 > -------------------------------------------
-> This project was carried out on AWS EC2
-> The AMI used was Ubuntu 20.04LTS 
+> This project was carried out on AWS EC2 CLI
+> The AMI used was Ubuntu 20.04LTS
