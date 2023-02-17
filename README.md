@@ -56,11 +56,11 @@
  
  5. Configure PHP, NGINX and MYSQL
  
- - PHP: Create PHP directory and local.ini file. See php/local.ini file [here](https://github.com/ozirichigozie/altschool-docker-laravel/php/local.ini)
+ - PHP: Create PHP directory and local.ini file. See php/local.ini file [here](https://github.com/ozirichigozie/altschool-docker-laravel/blob/main/php/local.ini)
  
  - NGINX: Create nginx/conf.d/app.conf file
  
- > Find content of app.conf file [here](https://github.com/ozirichigozie/altschool-docker-laravel/nginx/conf.d/app.conf)
+ > Find content of app.conf file [here](https://github.com/ozirichigozie/altschool-docker-laravel/blob/main/nginx/conf.d/app.conf)
 
  - MYSQL:
    
@@ -69,7 +69,7 @@
    $ vi ~/altschool-docker-laravel/mysql/mysql.cnf
    ```
 
- > Find content of mysql.cnf file [here](https://github.com/ozirichigozie/altschool-docker-laravel/mysql/mysql.cnf)
+ > Find content of mysql.cnf file [here](https://github.com/ozirichigozie/altschool-docker-laravel/blob/main/mysql/mysql.cnf)
 
  Customize Docker Environment Variables
  - Copy .env.example file to .env file
@@ -85,7 +85,7 @@
    DB_PASSWORD=write_your_password
    ```
 
- > Find content of .env.example file [here](https://github.com/ozirichigozie/altschool-docker-laravel/.env.example)
+ > Find content of .env.example file [here](https://github.com/ozirichigozie/altschool-docker-laravel/blob/main/.env.example)
  
  6. Run the Application Using Docker Compose 
  - Build app image
@@ -107,4 +107,9 @@
  `docker-compose exec app php artisan key:generate`
  
  7. Visit http://your_server_ip in the browser
- 
+
+
+> ### NOTE: 
+> -------------------------------------------
+> This project was carried out on AWS EC2
+> The AMI used was Ubuntu 20.04LTS 
